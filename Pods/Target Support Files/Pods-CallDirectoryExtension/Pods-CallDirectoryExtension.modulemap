@@ -1,0 +1,6 @@
+framework module Pods_CallDirectoryExtension {
+  umbrella header "Pods-CallDirectoryExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

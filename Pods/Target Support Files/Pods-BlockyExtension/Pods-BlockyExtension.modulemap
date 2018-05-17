@@ -1,0 +1,6 @@
+framework module Pods_BlockyExtension {
+  umbrella header "Pods-BlockyExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
