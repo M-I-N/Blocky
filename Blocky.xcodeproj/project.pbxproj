@@ -88,6 +88,7 @@
 		8615CDEC5C4A249FDE592E74 /* Pods-BlockyExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockyExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockyExtension/Pods-BlockyExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockNumberViewController.swift; sourceTree = "<group>"; };
 		AF47C33420884AA2001E20E0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AF4B285520ADFA2E001C335A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		AF6D975920AA9B6300DFC8D5 /* BlockedListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewController.swift; sourceTree = "<group>"; };
 		AF6D975B20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewCell.swift; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		AF719A4F2085C275004E4C0C = {
 			isa = PBXGroup;
 			children = (
+				AF4B285520ADFA2E001C335A /* README.md */,
 				AF719A5A2085C275004E4C0C /* Blocky */,
 				AF719A722085C327004E4C0C /* BlockyExtension */,
 				AF8A8C6120A99629005DA20E /* CallDirectoryExtension */,
