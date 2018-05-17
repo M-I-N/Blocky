@@ -2,13 +2,13 @@
 //  BlockyExtension.swift
 //  BlockyExtension
 //
-//  Created by Nayem BJIT on 4/17/18.
-//  Copyright © 2018 BJIT Ltd. All rights reserved.
+//  Created by Nayem on 4/17/18.
+//  Copyright © 2018 Mufakkharul Islam Nayem. All rights reserved.
 //
 
 import IdentityLookup
 
-final class BlockyExtension: ILBlockyExtension {
+final class BlockyExtension: ILMessageFilterExtension {
 
     /*private var words = [String]()
     private lazy var wordsToFiler: [String] = {
@@ -32,16 +32,16 @@ final class BlockyExtension: ILBlockyExtension {
 
 }
 
-extension BlockyExtension: ILBlockyQueryHandling {
+extension BlockyExtension: ILMessageFilterQueryHandling {
     
-    func handle(_ queryRequest: ILBlockyQueryRequest, context: ILBlockyExtensionContext, completion: @escaping (ILBlockyQueryResponse) -> Void) {
+    func handle(_ queryRequest: ILMessageFilterQueryRequest, context: ILMessageFilterExtensionContext, completion: @escaping (ILMessageFilterQueryResponse) -> Void) {
         // First, check whether to filter using offline data (if possible).
         let offlineAction = self.offlineAction(for: queryRequest)
         
         switch offlineAction {
         case .allow, .filter:
             // Based on offline data, we know this message should either be Allowed or Filtered. Send response immediately.
-            let response = ILBlockyQueryResponse()
+            let response = ILMessageFilterQueryResponse()
             response.action = offlineAction
             
             completion(response)
@@ -50,7 +50,7 @@ extension BlockyExtension: ILBlockyQueryHandling {
             // Based on offline data, we do not know whether this message should be Allowed or Filtered. Defer to network.
             // Note: Deferring requests to network requires the extension target's Info.plist to contain a key with a URL to use. See documentation for details.
             context.deferQueryRequestToNetwork() { (networkResponse, error) in
-                let response = ILBlockyQueryResponse()
+                let response = ILMessageFilterQueryResponse()
                 response.action = .none
                 
                 if let networkResponse = networkResponse {
@@ -65,7 +65,7 @@ extension BlockyExtension: ILBlockyQueryHandling {
         }
     }
     
-    private func offlineAction(for queryRequest: ILBlockyQueryRequest) -> ILBlockyAction {
+    private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         // Replace with logic to perform offline check whether to filter first (if possible).
         guard let messageBody = queryRequest.messageBody, let messageSender = queryRequest.sender else {
             return .none
@@ -76,7 +76,7 @@ extension BlockyExtension: ILBlockyQueryHandling {
         return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) || numbersToFilter.contains(messageSender) ? .filter : .none
     }
     
-    private func action(for networkResponse: ILNetworkResponse) -> ILBlockyAction {
+    private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {
         // Replace with logic to parse the HTTP response and data payload of `networkResponse` to return an action.
         return .none
     }

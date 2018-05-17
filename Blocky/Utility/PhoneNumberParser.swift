@@ -2,8 +2,8 @@
 //  PhoneNumberParser.swift
 //  Blocky
 //
-//  Created by Nayem BJIT on 5/17/18.
-//  Copyright © 2018 BJIT Ltd. All rights reserved.
+//  Created by Nayem on 5/17/18.
+//  Copyright © 2018 Mufakkharul Islam Nayem. All rights reserved.
 //
 
 import PhoneNumberKit

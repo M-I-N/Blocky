@@ -2,8 +2,8 @@
 //  BlockedListTableViewController.swift
 //  Blocky
 //
-//  Created by Nayem BJIT on 5/15/18.
-//  Copyright © 2018 BJIT Ltd. All rights reserved.
+//  Created by Nayem on 5/15/18.
+//  Copyright © 2018 Mufakkharul Islam Nayem. All rights reserved.
 //
 
 import UIKit
@@ -79,7 +79,7 @@ class BlockedListTableViewController: UIViewController {
     @IBAction func saveBlockingNumber(_ segue: UIStoryboardSegue) {}
 
     private func showAlertToEnableCallblockingFeature() {
-        let alertController = UIAlertController(title: "Enable Call Blocking Feature", message: "Go-to Settings->Phone->Call Blocking & Identification->Turn On \"Block & Filter\"", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Enable Call Blocking Feature", message: "Go-to Settings->Phone->Call Blocking & Identification->Turn On \"Blocky\"", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { [unowned self] (action) in
             self.openCallBlockingSettings()
         }

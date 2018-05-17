@@ -2,8 +2,8 @@
 //  AddBlockNumberViewController.swift
 //  Blocky
 //
-//  Created by Nayem BJIT on 5/15/18.
-//  Copyright © 2018 BJIT Ltd. All rights reserved.
+//  Created by Nayem on 5/15/18.
+//  Copyright © 2018 Mufakkharul Islam Nayem. All rights reserved.
 //
 
 import UIKit
